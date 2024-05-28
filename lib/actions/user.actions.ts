@@ -7,10 +7,16 @@ import { parseStringify } from "../utils"
 
 export const signIn = async ({ email, password }: signInProps) => {
   try {
-    // Mutation or fetch
     const { account } = await createAdminClient();
 
     const response = await account.createEmailPasswordSession(email, password);
+
+    cookies().set("appwrite-session", response.secret, {
+      path: "/",
+      httpOnly: true,
+      sameSite: "strict",
+      secure: true,
+    });
 
     return parseStringify(response);
   } catch (error) {
@@ -48,7 +54,7 @@ export const signUp = async (userData: SignUpParams) => {
   }
 }
 
-export async function getLoggedInUser() {
+export const getLoggedInUser = async () => {
   try {
     const { account } = await createSessionClient();
     const user = await account.get();

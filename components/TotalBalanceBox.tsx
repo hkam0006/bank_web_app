@@ -12,11 +12,11 @@ const TotalBalanceBox = ({
         />
       </div>
 
-      <div className='vertical-stack gap-6'>
+      <div className='v-stack gap-6'>
         <h2 className='header-2'>
           Bank Accounts: {totalBanks}
         </h2>
-        <div className='vertical-stack gap-2'>
+        <div className='v-stack gap-2'>
           <p className='total-balance-label'>
             Total Current Balance
           </p>

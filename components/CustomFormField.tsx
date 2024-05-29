@@ -33,7 +33,7 @@ const CustomFormField = ({ control, name, label, placeholder }: CustomFormFieldP
           <FormLabel className='form-label'>
             {label}
           </FormLabel>
-          <div className='vertical-stack w-full '>
+          <div className='v-stack w-full '>
             <FormControl>
               <Input
                 placeholder={placeholder}

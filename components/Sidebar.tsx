@@ -7,13 +7,14 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import React from 'react'
 import Footer from './Footer'
+import PlaidLink from './PlaidLink'
 
 const Sidebar = ({ user }: SiderbarProps) => {
   const pathName = usePathname();
 
   return (
     <section className='sidebar'>
-      <nav className='vertical-stack gap-4'>
+      <nav className='v-stack gap-4'>
         <Link
           href='/'
           className='flex mb-12 cursor-pointer items-center gap-2'
@@ -49,7 +50,7 @@ const Sidebar = ({ user }: SiderbarProps) => {
             </Link>
           )
         })}
-        USER
+        <PlaidLink user={user} />
       </nav>
       <Footer user={user} type='desktop' />
     </section>

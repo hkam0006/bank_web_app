@@ -47,11 +47,11 @@
 }
 
 @layer utilities {
-  .vertical-stack {
+  .v-stack {
     @apply flex flex-col
   }
 
-  .horizontal-stack {
+  .h-stack {
     @apply flex flex-row
   }
 

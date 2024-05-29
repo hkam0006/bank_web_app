@@ -33,7 +33,7 @@ const MobileNav = ({ user }: MobileNavProps) => {
           />
         </SheetTrigger>
         <SheetContent side='left' className='border-none bg-white'>
-          <nav className='vertical-stack gap-4'>
+          <nav className='v-stack gap-4'>
             <Link
               href='/'
               className='flex cursor-pointer items-center gap-1 px-4'
@@ -48,7 +48,7 @@ const MobileNav = ({ user }: MobileNavProps) => {
             </Link>
             <div className='mobilenav-sheet'>
               <SheetClose asChild>
-                <nav className='vertical-stack h-full gap-6 pt-16 text-white'>
+                <nav className='v-stack h-full gap-6 pt-16 text-white'>
                   {sidebarLinks.map((item) => {
                     const isActive = pathName === item.route || pathName.startsWith(`${item.route}/`)
                     return (
